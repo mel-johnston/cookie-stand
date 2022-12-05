@@ -1,0 +1,31 @@
+
+
+header {
+  font-family: 'Red Hat Display', sans-serif;
+  font-weight: bold;
+  font-size: 3rem;
+  background-color: lightgray;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+}
+
+ul {
+  padding: 1rem;
+  font-family: Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+li {
+  padding-left: .5rem;
+  font-weight: normal;
+}
