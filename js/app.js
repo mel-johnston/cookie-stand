@@ -38,16 +38,16 @@ Store.prototype.render = function () {
 
   let ul = document.createElement('tr');
   storeSales.appendChild(ul);
-  ul.innerText = `${this.name}`
+  ul.innerText = this.name;
 
   for (let i = 0; i < hours.length; i++) {
     let li = document.createElement('td');
     ul.appendChild(li);
-    li.innerText = `${this.hourlySales[i]}`;
+    li.innerText = this.hourlySales[i];
   }
   let li = document.createElement('td');
   ul.appendChild(li);
-  li.innerText = `${this.totalSales}`;
+  li.innerText = this.totalSales;
 }
 
 // ************************* EXECUTEABLE CODE *************************
@@ -75,17 +75,45 @@ blankHeader.innerText = '';
 for (let i = 0; i < hours.length; i++) {
   let th = document.createElement('th');
   headerRow.appendChild(th);
-  th.innerText = `${hours[i]}`;
+  th.innerText = hours[i];
 }
 
 let totalHeader = document.createElement('th');
 headerRow.appendChild(totalHeader);
 totalHeader.innerText = 'Totals';
 
-let footerRow = document.createElement('tr');
-storeSales.appendChild(footerRow);
 
-let footerLabel = document.createElement('th');
-footerRow.appendChild(footerLabel);
-footerLabel.innerText = 'Hourly Totals';
 
+// ******************** footer  ***************
+function footerCreation() {
+  let footerRow = document.createElement('tr');
+  storeSales.appendChild(footerRow);
+
+  let footerLabel = document.createElement('th');
+  footerRow.appendChild(footerLabel);
+  footerLabel.innerText = 'Hourly Totals';
+
+  const hourlyTotals = [];
+  let grandTotal = 0;
+
+  for (let i = 0; i < hours.length; i++) {
+    let hourTotal = 0;
+    for (let j = 0; j < cities.length; j++) {
+      hourTotal += cities[j].hourlySales[i];
+    }
+    hourlyTotals.push(hourTotal);
+    grandTotal += hourTotal;
+  }
+
+  for (let i = 0; i < hourlyTotals.length; i++) {
+    let hourTotalRow = document.createElement('th')
+    footerRow.appendChild(hourTotalRow);
+    hourTotalRow.innerText = hourlyTotals[i];
+  }
+
+  let grandTotalBox = document.createElement('th');
+  footerRow.appendChild(grandTotalBox);
+  grandTotalBox.innerText = grandTotal;
+} 
+
+footerCreation();

@@ -6,17 +6,15 @@ header {
   font-family: 'Red Hat Display', sans-serif;
   background-color: hsla(45, 53%, 70%, 70%);
   padding: 1rem 1rem 2rem;
-
 }
 
 h1 {
   text-align: left;
   font-weight: bold;
-  font-size: 5vw;
+  font-size: 3rem;
   text-align: center;
   padding: 1rem;
   color: hsl(17, 58%, 24%);
-
 }
 
 nav {
@@ -32,39 +30,46 @@ nav a {
   color: hsl(17, 57%, 37%);
 }
 
+nav a:hover {
+  background-color: hsla(45, 53%, 70%);
+  box-shadow: 2px 2px 0 hsla(45, 53%, 70%, 15%);
+  text-decoration: underline;
+  transition-duration: .4s;
+}
+
 #nav-img {
   width: 100%;
 }
 
-
 div {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   text-align: center;
   margin: 4rem auto;
   color: hsl(43, 38%, 61%);
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   max-width: 50%;
   letter-spacing: .8px;
-  /* border: 2px solid black; */
   padding: .8rem;
-  line-height: 1.2;
+  line-height: 1.3;
+  font-size: 1.2em;
 }
 
 h2 {
   padding: 2rem;
   text-align: center;
   color: hsl(43, 38%, 61%);
-  font-size: 3vw;
+  font-size: 2em;
   font-family: 'Red Hat Display', sans-serif;
 }
 
 h3 {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, serif;
   text-align: center;
   font-weight: bold;
-  font-size: 2vw;
-  color: hsla(45, 53%, 70%, 70%);
+  font-size: 1.2em;
+  color: hsl(43, 38%, 61%);
   letter-spacing: .8px;
 }
 
@@ -74,34 +79,51 @@ h3 {
 }
 
 #store-locations div {
-  border: 2px solid hsla(45, 53%, 70%, 70%);
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
   background-color: hsla(45, 53%, 70%, 70%);
+  border: 2px solid hsla(45, 53%, 70%, 70%);
   color: hsl(17, 58%, 24%);
   line-height: 1.2;
-
+  font-size: 1rem;
 }
 
+.intro {
+  background-color: hsla(45, 53%, 70%, 70%);
+  border: 2px solid hsla(45, 53%, 70%, 70%);
+  color: hsl(17, 58%, 24%);
+}
+
+#store-hours {
+  background-color: hsla(45, 53%, 70%, 70%);
+  border: 2px solid hsla(45, 53%, 70%, 70%);
+  color: hsl(17, 58%, 24%);
+}
 
 
 footer {
   background-color: hsla(45, 53%, 70%, 70%);
   color: hsl(17, 58%, 24%);
   padding: 1rem;
-  bottom: 0;
-  position: aboslute;
   text-align: center;
-
+  font-size: 18px;
 }
 
-#cutter {
-  height: 125px;
+footer img {
+  height: 30px;
+  padding: 0 10px;
+  margin: 0 10px;
+  border: 2px solid hsl(17, 58%, 24%);
+  border-radius: 50%;
+  
+}
+
+#chinook {
+  opacity: .7;
 }
 
 .fish {
-  /* border-radius: 80%; */
   opacity: 0.8;
   height: 70px;
 }
@@ -110,11 +132,13 @@ footer {
   opacity: 0.8;
 }
 
-footer img {
-  height: 50px;
+#family-img {
+  border-radius: 50px;
 }
 
-/* Sales Page */
+
+/*************** TABLE *****************/
+
 
 table {
   border: 2px solid black;
@@ -122,7 +146,7 @@ table {
   font-family: Verdana, sans-serif;
   margin: 1rem auto;
   text-align: center;
-
+  color: hsl(16, 58%, 11%)
 }
 
 tr,
@@ -131,25 +155,27 @@ th {
   border: 1px solid black;
   padding: .5rem;
   background-color: hsl(42, 15%, 50%);
-
 }
 
 tr {
   padding: .25vw;
 }
 
-tr:nth-child(even) td {
-  background-color: hsl(43, 43%, 62%);
-  ;
-}
-
-tr:nth-child(odd) td {
+tr td {
   background-color: hsl(43, 43%, 62%);
 }
 
+td:last-of-type  {
+  background-color: hsl(42, 15%, 50%);
+}
 
-/* About Page */
+td:hover {
+  background-color: hsl(17, 58%, 24%, 75%);
+  color: hsl(43, 43%, 62%);
+}
 
-#family-img {
-  border-radius: 50px;
+tr th:hover {
+  background-color: hsl(17, 58%, 24%, 75%);
+  color: hsl(43, 43%, 62%);
+  transition-delay: .2s;
 }
