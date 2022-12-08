@@ -84,7 +84,8 @@ totalHeader.innerText = 'Totals';
 
 
 
-// ******************** footer  ***************
+// ************************* FOOTER  *************************
+
 function footerCreation() {
   let footerRow = document.createElement('tr');
   storeSales.appendChild(footerRow);
@@ -117,3 +118,8 @@ function footerCreation() {
 } 
 
 footerCreation();
+
+// ************************* ADD EVENT LISTENER  *************************
+
+let myForm = document.querySelector('my-form');
+
