@@ -25,7 +25,31 @@
     <main>
       <h2>Sales Data</h2>
       <table id="store-sales"></table>
-      <script src="js/app.js"></script>
+
+      <form id="my-form">
+        <fieldset>
+          <legend>Add New Sales Data</legend>
+        
+
+        <label for="city">Location</label>
+        <input name="city" type="text" id="city" required>
+
+        <label for="minCust">Minimum Customers</label>
+        <input name="minCust" type="number" id="minCust" required>
+
+        <label for="maxCust">Maximum Customers</label>
+        <input name="maxCust" type="number" id="maxCust" required>
+
+        <label for="averageCookies">Average Cookies per Customer</label>
+        <input name="averageCookies" type="number" id="averageCookies" required>
+
+        <button type="submit">SUBMIT</button>
+
+      </fieldset>
+      </form>
+
+
+
       <div><img class="fish" src="img/fish2.png" alt="fish">
         <img class="fish" src="img/fish2.png" alt="fish">
         <img class="fish" src="img/fish2.png" alt="fish">
@@ -37,6 +61,7 @@
         <img class="fish" src="img/fish2.png" alt="fish">
         <img class="fish" src="img/fish2.png" alt="fish">
       </div>
+      <script src="js/app.js"></script>
     </main>
     <footer>
       <img src="img/cutter2.png" alt="cutter">

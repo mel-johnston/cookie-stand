@@ -1,12 +1,11 @@
 'use strict'
 
+// ************************* GLOBAL VARIABLES *************************
+
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
 let storeSales = document.getElementById('store-sales');
-
-function randomCookies(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) + min);
-}
+const myForm = document.querySelector('#my-form');
+const inputs = document.querySelectorAll('input');
 
 // ************************* CONSTRUCTOR *************************
 
@@ -22,7 +21,7 @@ function Store(name, min, max, average) {
 Store.prototype.cookieSales = function () {
   const cookiesPerHour = [];
   for (let hour of hours) {
-    let customersPerHour = Math.floor(Math.random() * (this.max - this.min + 1) + this.min);
+    let customersPerHour = Math.floor(Math.random() * (this.max - this.min) + this.min);
     let cookiesCalculated = Math.floor(customersPerHour * this.average);
     cookiesPerHour.push(cookiesCalculated);
   } this.hourlySales = cookiesPerHour;
@@ -84,7 +83,8 @@ totalHeader.innerText = 'Totals';
 
 
 
-// ******************** footer  ***************
+// ************************* FOOTER  *************************
+
 function footerCreation() {
   let footerRow = document.createElement('tr');
   storeSales.appendChild(footerRow);
@@ -114,6 +114,19 @@ function footerCreation() {
   let grandTotalBox = document.createElement('th');
   footerRow.appendChild(grandTotalBox);
   grandTotalBox.innerText = grandTotal;
-} 
+}
 
 footerCreation();
+
+// ************************* ADD EVENT LISTENER  *************************
+
+myForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  let newStore = new Store(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value);
+  cities.push(newStore);
+  storeSales.deleteRow(-1);
+  newStore.cookieSales();
+  newStore.render();
+  footerCreation();
+
+})
