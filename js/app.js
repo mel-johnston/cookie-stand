@@ -21,7 +21,7 @@ function Store(name, min, max, average) {
 Store.prototype.cookieSales = function () {
   const cookiesPerHour = [];
   for (let hour of hours) {
-    let customersPerHour = Math.floor(Math.random() * (this.max - this.min) + this.min);
+    let customersPerHour = Math.round(Math.random()  * (this.max - this.min)) + this.min
     let cookiesCalculated = Math.floor(customersPerHour * this.average);
     cookiesPerHour.push(cookiesCalculated);
   } this.hourlySales = cookiesPerHour;
@@ -122,7 +122,7 @@ footerCreation();
 
 myForm.addEventListener('submit', function (event) {
   event.preventDefault();
-  let newStore = new Store(inputs[0].value, inputs[1].value, inputs[2].value, inputs[3].value);
+  let newStore = new Store(inputs[0].value, +inputs[1].value, +inputs[2].value, +inputs[3].value);
   cities.push(newStore);
   storeSales.deleteRow(-1);
   newStore.cookieSales();
