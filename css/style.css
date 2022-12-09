@@ -1,4 +1,6 @@
-html { background-color: hsl(41, 27%, 16%, 90%); }
+html {
+  background-color: hsl(41, 27%, 16%, 90%);
+}
 
 header {
   font-family: 'Red Hat Display', sans-serif;
@@ -15,7 +17,9 @@ h1 {
   color: hsl(17, 58%, 24%);
 }
 
-nav { text-align: center; }
+nav {
+  text-align: center;
+}
 
 nav a {
   padding: .3rem;
@@ -31,9 +35,12 @@ nav a:hover {
   box-shadow: 2px 2px 0 hsla(45, 53%, 70%, 15%);
   text-decoration: underline;
   transition-duration: .4s;
+  cursor: URL('/code-201/cookie-stand/img/cursor-fish.png'), auto;
 }
 
-#nav-img { width: 100%; }
+#nav-img {
+  width: 100%;
+}
 
 div {
   display: flex;
@@ -113,11 +120,17 @@ footer img {
 
 }
 
-#chinook { opacity: .7; }
+#chinook {
+  opacity: .7;
+}
 
-#frosted { opacity: 0.8; }
+#frosted {
+  opacity: 0.8;
+}
 
-#family-img { border-radius: 50px; }
+#family-img {
+  border-radius: 50px;
+}
 
 .fish {
   opacity: 0.8;
@@ -137,17 +150,25 @@ table {
   color: hsl(16, 58%, 11%)
 }
 
-tr, td, th {
+tr,
+td,
+th {
   border: 1px solid hsl(41, 27%, 16%);
   padding: .5rem;
   background-color: hsl(42, 15%, 50%);
 }
 
-tr { padding: .25vw; }
+tr {
+  padding: .25vw;
+}
 
-tr td { background-color: hsl(43, 43%, 62%); }
+tr td {
+  background-color: hsl(43, 43%, 62%);
+}
 
-td:last-of-type { background-color: hsl(42, 15%, 50%); }
+td:last-of-type {
+  background-color: hsl(42, 15%, 50%);
+}
 
 td:hover {
   background-color: hsl(17, 58%, 24%, 75%);
@@ -160,7 +181,6 @@ tr th:hover {
   background-color: hsl(17, 58%, 24%, 75%);
   color: hsl(43, 43%, 62%);
   transition-delay: 20ms;
-  cursor: grab;
   cursor: URL('/code-201/cookie-stand/img/cursor-fish.png'), auto;
 }
 
@@ -202,6 +222,10 @@ input {
   border: solid 1px hsl(17, 58%, 24%);
   border-radius: 5px;
   background-color: rgba(218, 213, 213, 0.849);
+}
+
+input:hover {
+  cursor: URL('/code-201/cookie-stand/img/cursor-fish.png'), auto;
 }
 
 form button {
